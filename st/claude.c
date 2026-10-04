@@ -1927,7 +1927,7 @@ static void submit(void)
 			tcp_port = port;
 			use_link(LINK_TCP);
 		} else {
-			form_alert(1, "[1][Use: /connect 192.168.68.126|or /connect 192.168.68.126:2323][ OK ]");
+			form_alert(1, "[1][Use: /connect 192.168.1.10|or /connect 192.168.1.10:2323|(your gateway's address)][ OK ]");
 			return;
 		}
 	} else if (!search_mode && !strcmp(input, "/serial")) {
@@ -3276,7 +3276,7 @@ static void handle_msg(short *msg)
 			if (tcp_ip)
 				use_link(LINK_TCP);
 			else
-				form_alert(1, "[1][Type /connect and the IP|address of your gateway|in the reply line, e.g.|/connect 192.168.68.126][ OK ]");
+				form_alert(1, "[1][Type /connect and the IP|address of your gateway|in the reply line, e.g.|/connect 192.168.1.10][ OK ]");
 			break;
 		case MN_SER: use_link(LINK_SERIAL); break;
 		case MN_HEB: toggle_hebrew(); break;

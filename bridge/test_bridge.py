@@ -835,7 +835,7 @@ class TcpGateway(unittest.TestCase):
 
     def test_allow_list(self):
         from claude_bridge import TcpLink
-        link = TcpLink("127.0.0.1:0", allow=["192.168.68.129"])
+        link = TcpLink("127.0.0.1:0", allow=["192.168.1.20"])
         import socket
         import threading
         t = threading.Thread(target=link._accept, daemon=True)
